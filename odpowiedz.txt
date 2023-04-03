@@ -1,0 +1,1 @@
+Aplikacja wypisała w konsoli komunikat dzięki mechanizmowi nasłuchiwania EventEmitter na event 'connection'
