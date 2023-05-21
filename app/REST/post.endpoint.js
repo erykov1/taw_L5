@@ -13,8 +13,7 @@ const postEndpoint = (router) => {
     router.get("/api/post/:id", async (request, response, next) => {
     try {
       const id = request.params.id;
-
-      let result = await business.getPostManager().get(id);
+      const result = await business.getPostManager().get(id);
       response.status(200).send(result);
     } catch (error) {
       console.log(error);
