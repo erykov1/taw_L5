@@ -19,11 +19,13 @@ export class SearchBarComponent implements OnInit {
       this.sendFilter();
     });
   }
-  
-  sendFilter() {
-    this.router.navigate(['/'], {queryParams: {name:
-    this.filterText}});
-    this.name.emit(this.filterText);
-  }
 
+  sendFilter(): void {
+    this.name.emit(this.filterText);
+    this.router.navigate(['/blog'], {
+      queryParams: {
+        name:
+        this.filterText
+      }
+  })};
 }
